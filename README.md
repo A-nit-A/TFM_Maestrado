@@ -11,8 +11,15 @@ En este directorio se encuentran los prompts más relevantes usados para el TFM.
 
 ### Chats
 
+**Qwen_EvaluaciónPromptParaTest.md**
+Chat con Qwen 3.7 para el ajuste del Prompt para generar items para la encuesta.
+Qwen ajusta el Prompt a su gusto para luego poder usarlo a la hora de generar los items que formaron parte de la encuesta al profesorado.
+
 **Dice.md**
 Chat para la creación de la aplicación DICE. Esta aplicación crea un fichero Moodle XML que se importa directamente en Moodle (Aula Virtual) a partir del fichero JSON creado con el prompt de Generación Automática de Ítems.
+
+**Excel.md**
+Chat para usar comandos de Excel a la hora de organizar las tablas de datos de la encuesta para la creación de las gráficas.
 
 **ProfesoradoEnseñarAprenderAlumnado.md**
 Chat para generar un grafico en el que se explica como con el uso de la información guardada como vectores la IA puede relacionar conceptos como: profesorado y  alumnado.
