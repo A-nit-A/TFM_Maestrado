@@ -11,6 +11,11 @@ En este directorio se encuentran los prompts más relevantes usados para el TFM.
 
 ### Chats
 
+**ChatGPT_WhoYouAre.md**
+
+Chat con ChatGPT para averiguar que ofrece con la cuenta gratuita y a que empresa pertenece.
+La información luego se contrastó con su página web.
+
 **Qwen_EvaluaciónPromptParaTest.md**
 Chat con Qwen 3.7 para el ajuste del Prompt para generar items para la encuesta.
 Qwen ajusta el Prompt a su gusto para luego poder usarlo a la hora de generar los items que formaron parte de la encuesta al profesorado.
