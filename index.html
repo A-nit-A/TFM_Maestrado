@@ -94,7 +94,7 @@ class Component extends DCLogic {
 })();
 </script>
 <script>
-/* Navegación: cada pulsación avanza/retrocede exactamente 1 diapositiva */
+/* Navegación: cada pulsación avanza/retrocede exactamente 1 diapositiva y maneja la reproducción de vídeos */
 (function () {
   function getSlides() {
     return Array.from(document.querySelectorAll('section[data-label]'));
@@ -110,10 +110,39 @@ class Component extends DCLogic {
     return best;
   }
 
+  function playActiveVideos() {
+    const slides = getSlides();
+    if (!slides.length) return;
+    const activeIdx = currentIndex(slides);
+    const activeSlide = slides[activeIdx];
+    if (activeSlide) {
+      activeSlide.querySelectorAll('video').forEach(function(v) {
+        if (v.paused) {
+          v.play().catch(function(err) {
+            console.log("Autoplay failed/blocked:", err);
+          });
+        }
+      });
+    }
+  }
+
   function goTo(i, slides) {
     const idx = Math.max(0, Math.min(slides.length - 1, i));
     slides[idx].scrollIntoView({ behavior: 'auto', block: 'start' });
+    setTimeout(playActiveVideos, 100);
   }
+
+  // Reproducir vídeos al hacer click o pulsar teclas (interacción del usuario)
+  function bootstrapVideos() {
+    playActiveVideos();
+    document.removeEventListener('click', bootstrapVideos);
+    document.removeEventListener('keydown', bootstrapVideos);
+  }
+  document.addEventListener('click', bootstrapVideos);
+  document.addEventListener('keydown', bootstrapVideos);
+
+  // Intento inicial
+  setTimeout(playActiveVideos, 1000);
 
   const NEXT = ['PageDown', 'ArrowRight', 'ArrowDown', ' ', 'Spacebar'];
   const PREV = ['PageUp', 'ArrowLeft', 'ArrowUp'];

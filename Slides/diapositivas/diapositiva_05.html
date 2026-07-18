@@ -1,19 +1,13 @@
 <!-- Diapositiva 05: LLM -->
 <section data-label="Metodología (3 párrafos + imagen)" data-screen-label="05"
   data-speaker-notes="Imagen de apoyo con tres bloques de texto describiendo la metodología."
-  style="position:relative;width:100%;height:100%;background:var(--ink);overflow:hidden;display:flex;flex-direction:column;">
-  
-  <!-- Video de fondo y capa de contraste oscura (Dark Theme) -->
-  <video src="./Slides/Videos/RedesNeuronales.mp4" autoPlay="{{true}}" loop="{{true}}" muted="{{true}}" playsInline="{{true}}"
-    style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;z-index:0;"></video>
-  <div style="position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(21,22,26,0.65);z-index:1;"></div>
-
+  style="position:relative;width:100%;height:100%;background:var(--white);overflow:hidden;display:flex;flex-direction:column;">
   <div
-    style="position:absolute;right:-50px;top:44%;width:170px;height:170px;background:var(--bauhaus-yellow);opacity:{{shapeOpacity}};z-index:2;">
+    style="position:absolute;right:-50px;top:44%;width:170px;height:170px;background:var(--bauhaus-yellow);opacity:{{shapeOpacity}};">
   </div>
 
   <!-- Cabecera -->
-  <div style="position:relative;z-index:10;display:flex;align-items:center;justify-content:space-between;padding:56px var(--pad-x) 0;">
+  <div style="display:flex;align-items:center;justify-content:space-between;padding:56px var(--pad-x) 0;">
     <!-- Logo Universidade -->
     <div
       style="position:relative;z-index:20;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,0.55);padding:10px 18px;border-radius:8px;box-shadow:0 4px 14px rgba(0,0,0,0.30);">
@@ -23,7 +17,7 @@
     <div style="display:flex;align-items:center;gap:14px;">
       <span style="width:16px;height:16px;background:var(--bauhaus-red);"></span>
       <span
-        style="font-size:var(--type-small);letter-spacing:3px;font-weight:700;color:var(--bauhaus-yellow);text-transform:uppercase;">01
+        style="font-size:var(--type-small);letter-spacing:3px;font-weight:700;color:var(--vigo-blue);text-transform:uppercase;">01
         · Introducción</span>
     </div>
     <!-- Logo Máster -->
@@ -33,38 +27,44 @@
     </div>
   </div>
 
-  <div style="position:relative;z-index:10;padding:32px var(--pad-x) 0;">
-    <h2 style="margin:0;font-size:56px;font-weight:900;color:var(--white);letter-spacing:-1px;">
+  <div style="padding:32px var(--pad-x) 0;">
+    <h2 style="margin:0;font-size:56px;font-weight:900;color:var(--ink);letter-spacing:-1px;">
       LLM</h2>
-    <p style="font-size:var(--type-body);font-weight:300;color:rgba(255,255,255,0.85);margin:14px 0 0;">
+    <p style="font-size:var(--type-body);font-weight:300;color:#3B3C42;">
       Modelo matemático con una arquitectura basada en redes neuronales
       y entrenado con grandes cantidades de información.
     </p>
   </div>
 
+  <div style="padding:28px var(--pad-x) 0;height:450px;display:flex;align-items:center;justify-content:center;">
+    <video src="./Slides/Videos/RedesNeuronales.mp4" autoPlay="{{true}}" loop="{{true}}" muted="{{true}}" defaultMuted="{{true}}"
+      playsInline="{{true}}"
+      style="width:100%;height:100%;object-fit:cover;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.15);"></video>
+  </div>
+
   <!-- Características LLM -->
-  <div style="position:relative;z-index:10;display:flex;gap:64px;padding:36px var(--pad-x) var(--pad-bottom);margin-top:auto;">
+  <div style="flex:1;display:flex;gap:64px;padding:36px var(--pad-x) var(--pad-bottom);">
     <div style="flex:1;border-top:6px solid var(--bauhaus-red);padding-top:20px;">
-      <h3 style="margin:0;font-size:26px;font-weight:700;color:var(--white);">Arquitectura</h3>
-      <p style="margin:14px 0 0;font-size:22px;font-weight:300;color:rgba(255,255,255,0.75);line-height:1.5;">
+      <h3 style="margin:0;font-size:26px;font-weight:700;color:var(--ink);">Arquitectura</h3>
+      <p style="margin:14px 0 0;font-size:22px;font-weight:300;color:#3B3C42;line-height:1.5;">
         Respuesta rápida o razonamiento, especializado o general.
       </p>
     </div>
     <div style="flex:1;border-top:6px solid var(--bauhaus-yellow);padding-top:20px;">
-      <h3 style="margin:0;font-size:26px;font-weight:700;color:var(--white);">Contexto</h3>
-      <p style="margin:14px 0 0;font-size:22px;font-weight:300;color:rgba(255,255,255,0.75);line-height:1.5;">
+      <h3 style="margin:0;font-size:26px;font-weight:700;color:var(--ink);">Contexto</h3>
+      <p style="margin:14px 0 0;font-size:22px;font-weight:300;color:#3B3C42;line-height:1.5;">
         Cantidad de la memoria de trabajo.
       </p>
     </div>
     <div style="flex:1;border-top:6px solid var(--vigo-blue);padding-top:20px;">
-      <h3 style="margin:0;font-size:26px;font-weight:700;color:var(--white);">Alucinación</h3>
-      <p style="margin:14px 0 0;font-size:22px;font-weight:300;color:rgba(255,255,255,0.75);line-height:1.5;">
+      <h3 style="margin:0;font-size:26px;font-weight:700;color:var(--ink);">Alucinación</h3>
+      <p style="margin:14px 0 0;font-size:22px;font-weight:300;color:#3B3C42;line-height:1.5;">
         Fenomeno que ocurre cuando un LLM genera informacion falsa o sin sentido.
       </p>
     </div>
-    <div style="flex:1;border-top:6px solid var(--white);padding-top:20px;">
-      <h3 style="margin:0;font-size:26px;font-weight:700;color:var(--white);">Token</h3>
-      <p style="margin:14px 0 0;font-size:22px;font-weight:300;color:rgba(255,255,255,0.75);line-height:1.5;">
+    <div style="flex:1;border-top:6px solid var(--ink);padding-top:20px;">
+      <h3 style="margin:0;font-size:26px;font-weight:700;color:var(--ink);">Token</h3>
+      <p style="margin:14px 0 0;font-size:22px;font-weight:300;color:#3B3C42;line-height:1.5;">
         Unidad mínima de información que procesa el LLM. Directamente relaccionada con el coste.
       </p>
     </div>
@@ -72,7 +72,7 @@
 
   <sc-if value="{{showNumbers}}" hint-placeholder-val="{{true}}">
     <div
-      style="position:absolute;right:64px;bottom:64px;width:60px;height:60px;background:var(--bauhaus-red);display:flex;align-items:center;justify-content:center;z-index:10;">
+      style="position:absolute;right:64px;bottom:64px;width:60px;height:60px;background:var(--bauhaus-red);display:flex;align-items:center;justify-content:center;">
       <span style="font-size:24px;font-weight:900;color:var(--white);">05</span>
     </div>
   </sc-if>
