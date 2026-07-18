@@ -1,6 +1,9 @@
 # TFM_Maestrado
 Biblioteca de información con documentos relaccionados con mi TFM del Maestrado Universitario en Profesorado de la Universidade de Vigo
 
+## Presentación
+En este directorio se encuentra la presentación de la defensa del TFM en formato HTML interactivo.
+
 ## Base de conocimiento
 Aquí se encuentran lo ficheros que se usaron como referencia para la Generación Automática de Ítems que se emplearon como preguntas a evaluar por parte de los docentes en la encuesta de validación del prompt final.
   
