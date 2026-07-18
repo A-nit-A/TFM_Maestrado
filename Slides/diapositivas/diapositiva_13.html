@@ -35,17 +35,17 @@
     <h2 style="margin:14px 0 0;font-size:56px;font-weight:900;color:var(--ink);letter-spacing:-1px;">
       Perfil del profesorado y su actitud hacia la IA
     </h2>
+    <p style="font-size:var(--type-body);font-weight:300;color:#3B3C42;">
+      Análisis del perfil del docente y su actitud frente al uso de la IA en entornos educativos.
+    </p>
   </div>
 
   <div style="flex:1;display:flex;gap:56px;padding:36px var(--pad-x) var(--pad-bottom);">
     <div style="flex:1;display:flex;flex-direction:column;gap:20px;">
-      <!-- Wrapper Clickable para el modal -->
-      <div onclick="document.getElementById('image-modal').style.display='flex';" 
-           style="cursor:zoom-in;transition:transform 0.2s ease-in-out;"
-           onmouseover="this.style.transform='scale(1.02)';"
-           onmouseout="this.style.transform='scale(1)';"
-           title="Hacer clic para ampliar gráfica">
-        <image-slot id="profile-img-1" shape="rect" src="./Slides/imgs/Graficas/Perfil del docente.png" placeholder="Perfil del docente" style="width:100%;height:340px;pointer-events:none;"></image-slot>
+      <!-- Wrapper Clickable para el perfil docente modal -->
+      <div data-zoom-trigger="profile-modal" title="Hacer clic para ampliar gráfica">
+        <image-slot id="profile-img-1" shape="rect" fit="contain" src="./Slides/imgs/Graficas/Perfil del docente.png"
+          placeholder="Perfil del docente" style="width:100%;height:340px;pointer-events:none;"></image-slot>
       </div>
       <div style="width:56px;height:6px;background:var(--bauhaus-red);"></div>
       <p style="margin:0;font-size:24px;font-weight:300;color:#3B3C42;line-height:1.45;">
@@ -53,14 +53,23 @@
       </p>
     </div>
     <div style="flex:1;display:flex;flex-direction:column;gap:20px;">
-      <image-slot id="profile-img-2" shape="rect" placeholder="Frecuencia de uso" style="width:100%;height:340px;"></image-slot>
+      <!-- Wrapper Clickable para la frecuencia modal -->
+      <div data-zoom-trigger="freq-modal" title="Hacer clic para ampliar gráfica">
+        <image-slot id="profile-img-2" shape="rect" fit="contain"
+          src="./Slides/imgs/Graficas/Frecuencia de uso de la IA.png" placeholder="Frecuencia de uso"
+          style="width:100%;height:340px;pointer-events:none;"></image-slot>
+      </div>
       <div style="width:56px;height:6px;background:var(--bauhaus-yellow);"></div>
       <p style="margin:0;font-size:24px;font-weight:300;color:#3B3C42;line-height:1.45;">
         Frecuencia de uso de la IA
       </p>
     </div>
     <div style="flex:1;display:flex;flex-direction:column;gap:20px;">
-      <image-slot id="profile-img-3" shape="rect" placeholder="Actitud" style="width:100%;height:340px;"></image-slot>
+      <!-- Wrapper Clickable para la actitud modal -->
+      <div data-zoom-trigger="actitud-modal" title="Hacer clic para ampliar gráfica">
+        <image-slot id="profile-img-3" shape="rect" fit="contain" src="./Slides/imgs/Graficas/Actitud hacia la IA.png"
+          placeholder="Actitud hacia la IA" style="width:100%;height:340px;pointer-events:none;"></image-slot>
+      </div>
       <div style="width:56px;height:6px;background:var(--vigo-blue);"></div>
       <p style="margin:0;font-size:24px;font-weight:300;color:#3B3C42;line-height:1.45;">
         Actitud hacia el uso de la IA
@@ -68,18 +77,38 @@
     </div>
   </div>
 
-  <!-- Modal para ver la imagen en grande -->
-  <div id="image-modal" 
-       onclick="this.style.display='none'" 
-       style="display:none;position:absolute;inset:0;background:rgba(21,22,26,0.92);z-index:9999;align-items:center;justify-content:center;backdrop-filter:blur(8px);cursor:zoom-out;transition:all 0.25s ease-in-out;">
-    <img src="./Slides/imgs/Graficas/Perfil del docente.png" 
-         alt="Perfil del docente ampliado" 
-         style="max-width:92%;max-height:88%;border-radius:12px;box-shadow:0 24px 64px rgba(0,0,0,0.6);object-fit:contain;transition:transform 0.25s;"
-         onmouseover="this.style.transform='scale(1.01)';"
-         onmouseout="this.style.transform='scale(1)';" />
-    <div style="position:absolute;top:40px;right:40px;width:50px;height:50px;border-radius:50%;background:rgba(255,255,255,0.15);display:flex;align-items:center;justify-content:center;color:var(--white);font-size:28px;font-weight:900;cursor:pointer;transition:background 0.2s;"
-         onmouseover="this.style.background='rgba(255,255,255,0.25)';"
-         onmouseout="this.style.background='rgba(255,255,255,0.15)';">
+  <!-- Modal 1: Perfil del docente -->
+  <div id="profile-modal" data-zoom-modal="true"
+    style="display:none;position:absolute;inset:0;background:rgba(21,22,26,0.92);z-index:9999;align-items:center;justify-content:center;backdrop-filter:blur(8px);transition:all 0.25s ease-in-out;">
+    <img src="./Slides/imgs/Graficas/Perfil del docente.png" alt="Perfil del docente ampliado"
+      style="max-width:92%;max-height:88%;border-radius:12px;box-shadow:0 24px 64px rgba(0,0,0,0.6);object-fit:contain;" />
+    <div
+      style="position:absolute;top:40px;right:40px;width:50px;height:50px;border-radius:50%;background:rgba(255,255,255,0.15);display:flex;align-items:center;justify-content:center;color:var(--white);font-size:28px;font-weight:900;transition:background 0.2s;"
+      class="close-btn">
+      &times;
+    </div>
+  </div>
+
+  <!-- Modal 2: Frecuencia de uso -->
+  <div id="freq-modal" data-zoom-modal="true"
+    style="display:none;position:absolute;inset:0;background:rgba(21,22,26,0.92);z-index:9999;align-items:center;justify-content:center;backdrop-filter:blur(8px);transition:all 0.25s ease-in-out;">
+    <img src="./Slides/imgs/Graficas/Frecuencia de uso de la IA.png" alt="Frecuencia de uso ampliada"
+      style="max-width:92%;max-height:88%;border-radius:12px;box-shadow:0 24px 64px rgba(0,0,0,0.6);object-fit:contain;" />
+    <div
+      style="position:absolute;top:40px;right:40px;width:50px;height:50px;border-radius:50%;background:rgba(255,255,255,0.15);display:flex;align-items:center;justify-content:center;color:var(--white);font-size:28px;font-weight:900;transition:background 0.2s;"
+      class="close-btn">
+      &times;
+    </div>
+  </div>
+
+  <!-- Modal 3: Actitud hacia la IA -->
+  <div id="actitud-modal" data-zoom-modal="true"
+    style="display:none;position:absolute;inset:0;background:rgba(21,22,26,0.92);z-index:9999;align-items:center;justify-content:center;backdrop-filter:blur(8px);transition:all 0.25s ease-in-out;">
+    <img src="./Slides/imgs/Graficas/Actitud hacia la IA.png" alt="Actitud hacia la IA ampliada"
+      style="max-width:92%;max-height:88%;border-radius:12px;box-shadow:0 24px 64px rgba(0,0,0,0.6);object-fit:contain;" />
+    <div
+      style="position:absolute;top:40px;right:40px;width:50px;height:50px;border-radius:50%;background:rgba(255,255,255,0.15);display:flex;align-items:center;justify-content:center;color:var(--white);font-size:28px;font-weight:900;transition:background 0.2s;"
+      class="close-btn">
       &times;
     </div>
   </div>

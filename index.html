@@ -51,6 +51,22 @@
         a:hover {
           color: var(--bauhaus-red);
         }
+        [data-zoom-trigger] {
+          cursor: zoom-in;
+          transition: transform 0.2s ease-in-out;
+        }
+        [data-zoom-trigger]:hover {
+          transform: scale(1.02);
+        }
+        [data-zoom-modal] {
+          cursor: zoom-out;
+        }
+        [data-zoom-modal] img {
+          transition: transform 0.25s ease-in-out;
+        }
+        [data-zoom-modal] img:hover {
+          transform: scale(1.01);
+        }
       </style>
     </helmet>
     <x-import component-from-global-scope="image-slot" from="./Slides/js/image-slot.js" hint-size="1,1"
@@ -164,6 +180,22 @@ class Component extends DCLogic {
       }
       document.addEventListener('click', bootstrapVideos);
       document.addEventListener('keydown', bootstrapVideos);
+
+      // Escuchar clics globales para abrir/cerrar modales de zoom de imágenes
+      document.addEventListener('click', function(e) {
+        const trigger = e.target.closest('[data-zoom-trigger]');
+        if (trigger) {
+          const modalId = trigger.getAttribute('data-zoom-trigger');
+          const modal = document.getElementById(modalId);
+          if (modal) {
+            modal.style.display = 'flex';
+          }
+        }
+        const modal = e.target.closest('[data-zoom-modal]');
+        if (modal) {
+          modal.style.display = 'none';
+        }
+      });
 
       // Escuchar el evento nativo de cambio de diapositiva de deck-stage
       document.addEventListener('slidechange', function (e) {
