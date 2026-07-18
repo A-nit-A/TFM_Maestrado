@@ -1,22 +1,64 @@
-<!-- Diapositiva 08: Cierre y agradecimientos -->
-<section data-label="Cierre" data-screen-label="08" data-speaker-notes="Diapositiva de cierre: agradecimiento y datos de contacto." style="position:relative;width:100%;height:100%;background:var(--vigo-blue);overflow:hidden;display:flex;flex-direction:column;">
-<div style="position:absolute;left:50%;top:-300px;width:640px;height:640px;border-radius:50%;background:var(--bauhaus-yellow);opacity:{{shapeOpacity}};transform:translateX(-50%);"></div>
-<div style="position:absolute;right:60px;bottom:180px;width:0;height:0;border-left:130px solid transparent;border-right:130px solid transparent;border-bottom:200px solid var(--bauhaus-red);opacity:{{shapeOpacity}};"></div>
-
-<div style="display:flex;align-items:center;justify-content:space-between;padding:56px var(--pad-x) 0;">
-  <div style="position:relative;z-index:20;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,0.55);padding:10px 18px;border-radius:8px;box-shadow:0 4px 14px rgba(0,0,0,0.30);"><img src="./Slides/imgs/logo.png" alt="Logo Universidad" style="width:280px;height:78px;object-fit:contain;"></div>
-  <div style="position:relative;z-index:20;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,0.55);padding:10px 18px;border-radius:8px;box-shadow:0 4px 14px rgba(0,0,0,0.30);"><img src="./Slides/imgs/logo_master.png" alt="Logo Máster" style="width:280px;height:78px;object-fit:contain;"></div>
-</div>
-
-<div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;">
-  <h2 style="margin:0;font-size:120px;font-weight:900;color:var(--white);letter-spacing:-2px;">Gracias</h2>
-  <p style="margin:24px 0 0;font-size:var(--type-subtitle);font-weight:300;color:rgba(255,255,255,0.85);">Nombre Apellido Apellido · nombre.apellido@uvigo.gal</p>
-  <div style="margin-top:36px;width:120px;height:6px;background:var(--bauhaus-red);"></div>
-</div>
-
-<sc-if value="{{showNumbers}}" hint-placeholder-val="{{true}}">
-  <div style="position:absolute;right:64px;bottom:64px;width:60px;height:60px;background:var(--bauhaus-yellow);display:flex;align-items:center;justify-content:center;">
-    <span style="font-size:24px;font-weight:900;color:var(--ink);">08</span>
+<!-- Diapositiva 06: Hablar con la IA -->
+<section data-label="Resultados (3 imágenes)" data-screen-label="06"
+  data-speaker-notes="Tres imágenes de resultados, cada una con su propia descripción."
+  style="position:relative;width:100%;height:100%;background:var(--paper);overflow:hidden;display:flex;flex-direction:column;">
+  <div
+    style="position:absolute;left:-100px;bottom:-100px;width:0;height:0;border-left:160px solid transparent;border-right:160px solid transparent;border-bottom:240px solid var(--vigo-blue);opacity:{{shapeOpacity}};">
   </div>
-</sc-if>
+
+  <!-- Cabecera -->
+  <div style="display:flex;align-items:center;justify-content:space-between;padding:56px var(--pad-x) 0;">
+    <!-- Logo Universidad -->
+    <div
+      style="position:relative;z-index:20;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,0.55);padding:10px 18px;border-radius:8px;box-shadow:0 4px 14px rgba(0,0,0,0.30);">
+      <img src="./Slides/imgs/logo.png" alt="Logo Universidad" style="width:280px;height:78px;object-fit:contain;">
+    </div>
+
+    <!-- Capítulo -->
+    <div style="display:flex;align-items:center;gap:14px;">
+      <span style="width:16px;height:16px;border-radius:50%;background:var(--bauhaus-yellow);"></span>
+      <span
+        style="font-size:var(--type-small);letter-spacing:3px;font-weight:700;color:var(--vigo-blue);text-transform:uppercase;">
+        02 - MATERIAL Y MÉTODOS
+      </span>
+    </div>
+
+    <!-- Logo Máster -->
+    <div
+      style="position:relative;z-index:20;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,0.55);padding:10px 18px;border-radius:8px;box-shadow:0 4px 14px rgba(0,0,0,0.30);">
+      <img src="./Slides/imgs/logo_master.png" alt="Logo Máster" style="width:280px;height:78px;object-fit:contain;">
+    </div>
+  </div>
+
+  <!-- Apartado -->
+  <div style="padding:32px var(--pad-x) 0;">
+    <h2 style="margin:14px 0 0;font-size:56px;font-weight:900;color:var(--ink);letter-spacing:-1px;">
+      Diseño de la investigación
+    </h2>
+  </div>
+
+  <div style="flex:1;display:flex;gap:56px;padding:36px var(--pad-x) var(--pad-bottom);">
+    <div style="flex:1;display:flex;flex-direction:column;gap:20px;">
+      <image-slot id="res-img-1" shape="rect" placeholder="Resultado 1" style="width:100%;height:340px;"></image-slot>
+      <div style="width:56px;height:6px;background:var(--bauhaus-red);"></div>
+      <p style="margin:0;font-size:24px;font-weight:300;color:#3B3C42;line-height:1.45;">
+        Generación Automática de Ítems
+      </p>
+    </div>
+    <div style="flex:1;display:flex;flex-direction:column;gap:20px;">
+      <image-slot id="res-img-3" shape="rect" placeholder="Resultado 3" style="width:100%;height:340px;"></image-slot>
+      <div style="width:56px;height:6px;background:var(--vigo-blue);"></div>
+      <p style="margin:0;font-size:24px;font-weight:300;color:#3B3C42;line-height:1.45;">
+        Validación mediante expertos
+      </p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <sc-if value="{{showNumbers}}" hint-placeholder-val="{{true}}">
+    <div
+      style="position:absolute;right:64px;bottom:64px;width:60px;height:60px;background:var(--vigo-blue);display:flex;align-items:center;justify-content:center;">
+      <span style="font-size:24px;font-weight:900;color:var(--white);">08</span>
+    </div>
+  </sc-if>
 </section>

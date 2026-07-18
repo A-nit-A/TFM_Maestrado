@@ -1,0 +1,77 @@
+<!-- Diapositiva 11: Recogida de datos (Encuesta) -->
+<section data-label="Recogida de datos" data-screen-label="11"
+  data-speaker-notes="Detalle sobre la recogida de datos mediante la encuesta de Google Forms distribuida al profesorado."
+  style="position:relative;width:100%;height:100%;background:var(--paper);overflow:hidden;display:flex;flex-direction:column;">
+  <div
+    style="position:absolute;right:-70px;top:-70px;width:220px;height:220px;background:var(--bauhaus-yellow);opacity:{{shapeOpacity}};">
+  </div>
+
+  <!-- Cabecera -->
+  <div style="display:flex;align-items:center;justify-content:space-between;padding:56px var(--pad-x) 0;">
+
+    <!-- Logo Universidade -->
+    <div
+      style="position:relative;z-index:20;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,0.55);padding:10px 18px;border-radius:8px;box-shadow:0 4px 14px rgba(0,0,0,0.30);">
+      <img src="./Slides/imgs/logo.png" alt="Logo Universidad" style="width:280px;height:78px;object-fit:contain;">
+    </div>
+    <!-- Capítulo -->
+    <div style="display:flex;align-items:center;gap:14px;">
+      <span style="width:16px;height:16px;border-radius:50%;background:var(--bauhaus-yellow);"></span>
+      <span
+        style="font-size:var(--type-small);letter-spacing:3px;font-weight:700;color:var(--vigo-blue);text-transform:uppercase;">
+        02 - MATERIAL Y MÉTODOS
+      </span>
+    </div>
+    <!-- Logo Máster -->
+    <div
+      style="position:relative;z-index:20;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,0.55);padding:10px 18px;border-radius:8px;box-shadow:0 4px 14px rgba(0,0,0,0.30);">
+      <img src="./Slides/imgs/logo_master.png" alt="Logo Máster" style="width:280px;height:78px;object-fit:contain;">
+    </div>
+  </div>
+
+  <div style="flex:1;display:flex;align-items:center;gap:96px;padding:0 var(--pad-x) var(--pad-bottom);">
+
+    <!-- Recuadro Encuesta Clickable -->
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLScJSTmPABuvJm6tVaRU1UB6m06mhMMi3ug_d2BkBn_74QZOkg/viewform?pli=1"
+       target="_blank"
+       style="flex:none;width:340px;height:340px;border-radius:10%;background:var(--vigo-blue);display:flex;align-items:center;justify-content:center;text-decoration:none;transition:transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), filter 0.2s ease, box-shadow 0.2s ease;cursor:pointer;box-shadow:0 8px 24px rgba(0,61,166,0.25);"
+       onmouseover="this.style.transform='scale(1.06)';this.style.filter='brightness(1.15)';this.style.boxShadow='0 12px 32px rgba(0,61,166,0.35)';"
+       onmouseout="this.style.transform='scale(1)';this.style.filter='none';this.style.boxShadow='0 8px 24px rgba(0,61,166,0.25)';">
+      <span style="font-size:60px;font-weight:900;color:var(--white);">
+        Encuesta
+      </span>
+    </a>
+
+    <div style="max-width:1000px;">
+      <h2 style="margin:0;font-size:var(--type-title);font-weight:900;color:var(--ink);letter-spacing:-1px;">
+        Recogida de datos
+      </h2>
+      <ul style="margin:28px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:18px;">
+        <li style="display:flex;align-items:center;gap:18px;font-size:var(--type-body);color:#3B3C42;font-weight:300;">
+          <span style="width:14px;height:14px;background:var(--bauhaus-red);flex:none;"></span>
+          Cuestionario estructurado dirigido al profesorado del departamento de Informática del IES de Téis.
+        </li>
+        <li style="display:flex;align-items:center;gap:18px;font-size:var(--type-body);color:#3B3C42;font-weight:300;">
+          <span style="width:14px;height:14px;border-radius:50%;background:var(--bauhaus-yellow);flex:none;"></span>
+          Google Forms.
+        </li>
+        <li style="display:flex;align-items:center;gap:18px;font-size:var(--type-body);color:#3B3C42;font-weight:300;">
+          <span style="width:14px;height:14px;background:var(--vigo-blue);flex:none;"></span>
+          Dividido en 4 secciones.
+        </li>
+        <li style="display:flex;align-items:center;gap:18px;font-size:var(--type-body);color:#000000;font-weight:300;">
+          <span style="width:14px;height:14px;background:var(--vigo-blue);flex:none;"></span>
+          Valoraciones de las preguntas de examen generadas con IA mediante una escala Likert.
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <sc-if value="{{showNumbers}}" hint-placeholder-val="{{true}}">
+    <div
+      style="position:absolute;right:64px;bottom:64px;width:60px;height:60px;background:var(--vigo-blue);display:flex;align-items:center;justify-content:center;">
+      <span style="font-size:24px;font-weight:900;color:var(--white);">11</span>
+    </div>
+  </sc-if>
+</section>

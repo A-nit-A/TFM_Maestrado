@@ -1,6 +1,6 @@
-<!-- Diapositiva 06: Hablar con la IA -->
-<section data-label="Resultados (3 imágenes)" data-screen-label="06"
-  data-speaker-notes="Tres imágenes de resultados, cada una con su propia descripción."
+<!-- Diapositiva 09: Flujo de trabajo -->
+<section data-label="Flujo de trabajo" data-screen-label="09"
+  data-speaker-notes="Flujo de trabajo organizado en 4 bloques: Biblioteca de conocimiento, Crear un prompt, Generar examen y Revisar y validar."
   style="position:relative;width:100%;height:100%;background:var(--paper);overflow:hidden;display:flex;flex-direction:column;">
   <div
     style="position:absolute;left:-100px;bottom:-100px;width:0;height:0;border-left:160px solid transparent;border-right:160px solid transparent;border-bottom:240px solid var(--vigo-blue);opacity:{{shapeOpacity}};">
@@ -16,10 +16,11 @@
 
     <!-- Capítulo -->
     <div style="display:flex;align-items:center;gap:14px;">
-      <span style="width:16px;height:16px;background:var(--bauhaus-red);"></span>
+      <span style="width:16px;height:16px;border-radius:50%;background:var(--bauhaus-yellow);"></span>
       <span
-        style="font-size:var(--type-small);letter-spacing:3px;font-weight:700;color:var(--vigo-blue);text-transform:uppercase;">01
-        · Introducción</span>
+        style="font-size:var(--type-small);letter-spacing:3px;font-weight:700;color:var(--vigo-blue);text-transform:uppercase;">
+        02 - MATERIAL Y MÉTODOS
+      </span>
     </div>
 
     <!-- Logo Máster -->
@@ -32,30 +33,37 @@
   <!-- Apartado -->
   <div style="padding:32px var(--pad-x) 0;">
     <h2 style="margin:14px 0 0;font-size:56px;font-weight:900;color:var(--ink);letter-spacing:-1px;">
-      Como hablar con la IA
+      Flujo de trabajo
     </h2>
   </div>
 
-  <div style="flex:1;display:flex;gap:56px;padding:36px var(--pad-x) var(--pad-bottom);">
-    <div style="flex:1;display:flex;flex-direction:column;gap:20px;">
-      <image-slot id="res-img-1" shape="rect" placeholder="Resultado 1" style="width:100%;height:340px;"></image-slot>
+  <div style="flex:1;display:flex;gap:40px;padding:36px var(--pad-x) var(--pad-bottom);">
+    <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:20px;">
+      <image-slot id="flow-img-1" shape="rect" placeholder="Paso 1" style="width:100%;height:340px;"></image-slot>
       <div style="width:56px;height:6px;background:var(--bauhaus-red);"></div>
       <p style="margin:0;font-size:24px;font-weight:300;color:#3B3C42;line-height:1.45;">
-        Prompt
+        Biblioteca de conocimiento
       </p>
     </div>
-    <div style="flex:1;display:flex;flex-direction:column;gap:20px;">
-      <image-slot id="res-img-2" shape="rect" placeholder="Resultado 2" style="width:100%;height:340px;"></image-slot>
-      <div style="width:56px;height:6px;background:var(--bauhaus-yellow);"></div>
-      <p style="margin:0;font-size:24px;font-weight:300;color:#3B3C42;line-height:1.45;">
-        Prompt Engineering
-      </p>
-    </div>
-    <div style="flex:1;display:flex;flex-direction:column;gap:20px;">
-      <image-slot id="res-img-3" shape="rect" placeholder="Resultado 3" style="width:100%;height:340px;"></image-slot>
+    <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:20px;">
+      <image-slot id="flow-img-2" shape="rect" placeholder="Paso 2" style="width:100%;height:340px;"></image-slot>
       <div style="width:56px;height:6px;background:var(--vigo-blue);"></div>
       <p style="margin:0;font-size:24px;font-weight:300;color:#3B3C42;line-height:1.45;">
-        Meta-Prompting
+        Crear un prompt
+      </p>
+    </div>
+    <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:20px;">
+      <image-slot id="flow-img-3" shape="rect" placeholder="Paso 3" style="width:100%;height:340px;"></image-slot>
+      <div style="width:56px;height:6px;background:var(--bauhaus-yellow);"></div>
+      <p style="margin:0;font-size:24px;font-weight:300;color:#3B3C42;line-height:1.45;">
+        Generar examen
+      </p>
+    </div>
+    <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:20px;">
+      <image-slot id="flow-img-4" shape="rect" placeholder="Paso 4" style="width:100%;height:340px;"></image-slot>
+      <div style="width:56px;height:6px;background:var(--ink);"></div>
+      <p style="margin:0;font-size:24px;font-weight:300;color:#3B3C42;line-height:1.45;">
+        Revisar y validar
       </p>
     </div>
   </div>
@@ -64,7 +72,7 @@
   <sc-if value="{{showNumbers}}" hint-placeholder-val="{{true}}">
     <div
       style="position:absolute;right:64px;bottom:64px;width:60px;height:60px;background:var(--vigo-blue);display:flex;align-items:center;justify-content:center;">
-      <span style="font-size:24px;font-weight:900;color:var(--white);">06</span>
+      <span style="font-size:24px;font-weight:900;color:var(--white);">09</span>
     </div>
   </sc-if>
 </section>
