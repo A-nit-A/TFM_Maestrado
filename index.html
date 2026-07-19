@@ -186,7 +186,8 @@ class Component extends DCLogic {
         const trigger = e.target.closest('[data-zoom-trigger]');
         if (trigger) {
           const modalId = trigger.getAttribute('data-zoom-trigger');
-          const modal = document.getElementById(modalId);
+          const slide = trigger.closest('section');
+          const modal = (slide && slide.querySelector('#' + modalId)) || document.getElementById(modalId);
           if (modal) {
             modal.style.display = 'flex';
           }

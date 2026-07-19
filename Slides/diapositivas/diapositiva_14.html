@@ -1,6 +1,6 @@
 <!-- Diapositiva 14: Calidad media de las preguntas -->
-<section data-label="Perfil del profesorado" data-screen-label="13"
-  data-speaker-notes="Perfil del profesorado encuestado y su actitud y frecuencia de uso de la IA."
+<section data-label="Calidad de las preguntas" data-screen-label="14"
+  data-speaker-notes="Calidad media de las preguntas según experiencia, frecuencia y actitud ante la IA."
   style="position:relative;width:100%;height:100%;background:var(--grey);overflow:hidden;display:flex;flex-direction:column;">
   <div
     style="position:absolute;left:-100px;bottom:-100px;width:0;height:0;border-left:160px solid transparent;border-right:160px solid transparent;border-bottom:240px solid var(--vigo-blue);opacity:{{shapeOpacity}};">
@@ -45,8 +45,8 @@
   <div style="flex:1;display:flex;gap:56px;padding:36px var(--pad-x) var(--pad-bottom);">
     <div style="flex:1;display:flex;flex-direction:column;gap:20px;">
       <!-- Wrapper Clickable para el perfil docente modal -->
-      <div data-zoom-trigger="profile-modal" title="Hacer clic para ampliar gráfica">
-        <image-slot id="profile-img-1" shape="rect" fit="contain"
+      <div data-zoom-trigger="calidad-exp-modal" title="Hacer clic para ampliar gráfica">
+        <image-slot id="calidad-img-1" shape="rect" fit="contain"
           src="./Slides/imgs/Graficas/CalidadSegunExperiencia.png" placeholder="Perfil del docente"
           style="width:100%;height:340px;pointer-events:none;"></image-slot>
       </div>
@@ -57,8 +57,8 @@
     </div>
     <div style="flex:1;display:flex;flex-direction:column;gap:20px;">
       <!-- Wrapper Clickable para la frecuencia modal -->
-      <div data-zoom-trigger="freq-modal" title="Hacer clic para ampliar gráfica">
-        <image-slot id="profile-img-2" shape="rect" fit="contain"
+      <div data-zoom-trigger="calidad-freq-modal" title="Hacer clic para ampliar gráfica">
+        <image-slot id="calidad-img-2" shape="rect" fit="contain"
           src="./Slides/imgs/Graficas/CalidadSegunFrecuencia.png" placeholder="Frecuencia de uso"
           style="width:100%;height:340px;pointer-events:none;"></image-slot>
       </div>
@@ -69,8 +69,8 @@
     </div>
     <div style="flex:1;display:flex;flex-direction:column;gap:20px;">
       <!-- Wrapper Clickable para la actitud modal -->
-      <div data-zoom-trigger="actitud-modal" title="Hacer clic para ampliar gráfica">
-        <image-slot id="profile-img-3" shape="rect" fit="contain" src="./Slides/imgs/Graficas/CalidadSegúnActitud.png"
+      <div data-zoom-trigger="calidad-actitud-modal" title="Hacer clic para ampliar gráfica">
+        <image-slot id="calidad-img-3" shape="rect" fit="contain" src="./Slides/imgs/Graficas/CalidadSegúnActitud.png"
           placeholder="Actitud hacia la IA" style="width:100%;height:340px;pointer-events:none;"></image-slot>
       </div>
       <div style="width:56px;height:6px;background:var(--vigo-blue);"></div>
@@ -81,7 +81,7 @@
   </div>
 
   <!-- Modal 1: Calidad según experiencia -->
-  <div id="profile-modal" data-zoom-modal="true"
+  <div id="calidad-exp-modal" data-zoom-modal="true"
     style="display:none;position:absolute;inset:0;background:rgba(21,22,26,0.92);z-index:9999;align-items:center;justify-content:center;backdrop-filter:blur(8px);transition:all 0.25s ease-in-out;">
     <img src="./Slides/imgs/Graficas/CalidadSegunExperiencia.png" alt="Calidad según experiencia ampliada"
       style="max-width:92%;max-height:88%;border-radius:12px;box-shadow:0 24px 64px rgba(0,0,0,0.6);object-fit:contain;" />
@@ -93,7 +93,7 @@
   </div>
 
   <!-- Modal 2: Calidad según frecuencia de uso -->
-  <div id="freq-modal" data-zoom-modal="true"
+  <div id="calidad-freq-modal" data-zoom-modal="true"
     style="display:none;position:absolute;inset:0;background:rgba(21,22,26,0.92);z-index:9999;align-items:center;justify-content:center;backdrop-filter:blur(8px);transition:all 0.25s ease-in-out;">
     <img src="./Slides/imgs/Graficas/CalidadSegunFrecuencia.png" alt="Calidad según frecuencia de uso ampliada"
       style="max-width:92%;max-height:88%;border-radius:12px;box-shadow:0 24px 64px rgba(0,0,0,0.6);object-fit:contain;" />
@@ -105,9 +105,9 @@
   </div>
 
   <!-- Modal 3: Calidad según actitud hacia la IA -->
-  <div id="actitud-modal" data-zoom-modal="true"
+  <div id="calidad-actitud-modal" data-zoom-modal="true"
     style="display:none;position:absolute;inset:0;background:rgba(21,22,26,0.92);z-index:9999;align-items:center;justify-content:center;backdrop-filter:blur(8px);transition:all 0.25s ease-in-out;">
-    <img src="./Slides/imgs/Graficas/CalidadSegunActitud.png" alt="Calidad según actitud hacia la IA ampliada"
+    <img src="./Slides/imgs/Graficas/CalidadSegúnActitud.png" alt="Calidad según actitud hacia la IA ampliada"
       style="max-width:92%;max-height:88%;border-radius:12px;box-shadow:0 24px 64px rgba(0,0,0,0.6);object-fit:contain;" />
     <div
       style="position:absolute;top:40px;right:40px;width:50px;height:50px;border-radius:50%;background:rgba(255,255,255,0.15);display:flex;align-items:center;justify-content:center;color:var(--white);font-size:28px;font-weight:900;transition:background 0.2s;"
