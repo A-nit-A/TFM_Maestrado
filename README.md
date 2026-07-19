@@ -1,13 +1,15 @@
 # TFM_Maestrado
-Biblioteca de información con documentos relaccionados con mi TFM del Maestrado Universitario en Profesorado de la Universidade de Vigo
+Biblioteca de información con documentos relacionados con mi TFM del Maestrado Universitario en Profesorado de la Universidade de Vigo
 
 ## Presentación
-En este directorio se encuentra la presentación de la defensa del TFM en formato HTML interactivo.
+La presentación interactiva para la defensa del TFM está disponible en:
+- **Online (GitHub Pages)**: [Presentación interactiva TFM](https://a-nit-a.github.io/TFM_Maestrado/)
+- **Local**: [index.html](./index.html) (abrir en el navegador)
 
 ## Base de conocimiento
-Aquí se encuentran lo ficheros que se usaron como referencia para la Generación Automática de Ítems que se emplearon como preguntas a evaluar por parte de los docentes en la encuesta de validación del prompt final.
+Aquí se encuentran los ficheros que se usaron como referencia para la Generación Automática de Ítems que se emplearon como preguntas a evaluar por parte de los docentes en la encuesta de validación del prompt final.
   
-Tambén añadimos la programación looifp de la materia Contornas e sintaxe en Python.
+También añadimos la programación looifp de la materia Contornas e sintaxe en Python.
 
 ## Prompts
 En este directorio se encuentran los prompts más relevantes usados para el TFM.
@@ -16,7 +18,7 @@ En este directorio se encuentran los prompts más relevantes usados para el TFM.
 
 **ChatGPT_WhoYouAre.md**
 
-Chat con ChatGPT para averiguar que ofrece con la cuenta gratuita y a que empresa pertenece.
+Chat con ChatGPT para averiguar qué ofrece con la cuenta gratuita y a qué empresa pertenece.
 La información luego se contrastó con su página web.
 
 **Qwen_EvaluaciónPromptParaTest.md**
@@ -30,10 +32,10 @@ Chat para la creación de la aplicación DICE. Esta aplicación crea un fichero 
 Chat para usar comandos de Excel a la hora de organizar las tablas de datos de la encuesta para la creación de las gráficas.
 
 **ProfesoradoEnseñarAprenderAlumnado.md**
-Chat para generar un grafico en el que se explica como con el uso de la información guardada como vectores la IA puede relacionar conceptos como: profesorado y  alumnado.
+Chat para generar un gráfico en el que se explica cómo con el uso de la información guardada como vectores la IA puede relacionar conceptos como: profesorado y alumnado.
 
 ### Encuesta
-A partir de **Prompt_Python_Base_5_preguntas.md** que es el prompt final para la generación automática de 5 preguntas sobre la materia Python3 se crean otro 5 prompts uno por cada modelo de IA usado para la encuesta de valoración de la calidad de los ítems.
+A partir de **Prompt_Python_Base_5_preguntas.md**, que es el prompt final para la generación automática de 5 preguntas sobre la materia Python3, se crean otros 5 prompts (uno por cada modelo de IA usado para la encuesta de valoración de la calidad de los ítems).
 
 - **Prompt_Python_ChatGP_5_preguntas.md** ChatGPT 5.5
 - **Prompt_Python_Claude_5_preguntas.md** Claude 4.6 Opus
