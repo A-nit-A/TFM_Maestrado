@@ -1,70 +1,63 @@
-<!-- Diapositiva 06: Hablar con la IA -->
-<section data-label="Resultados (3 imágenes)" data-screen-label="06"
-  data-speaker-notes="Tres imágenes de resultados, cada una con su propia descripción."
+<!-- Diapositiva 03: Punto clave de la Introducción -->
+<section data-label="Punto del capítulo" data-screen-label="03"
+  data-speaker-notes="Un único punto o idea clave del capítulo, con una cifra o dato de apoyo."
   style="position:relative;width:100%;height:100%;background:var(--paper);overflow:hidden;display:flex;flex-direction:column;">
   <div
-    style="position:absolute;left:-100px;bottom:-100px;width:0;height:0;border-left:160px solid transparent;border-right:160px solid transparent;border-bottom:240px solid var(--vigo-blue);opacity:{{shapeOpacity}};">
+    style="position:absolute;right:-70px;top:-70px;width:220px;height:220px;background:var(--bauhaus-yellow);opacity:{{shapeOpacity}};">
   </div>
 
-  <!-- Cabecera -->
   <div style="display:flex;align-items:center;justify-content:space-between;padding:56px var(--pad-x) 0;">
-    <!-- Logo Universidad -->
     <div
       style="position:relative;z-index:20;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,0.55);padding:10px 18px;border-radius:8px;box-shadow:0 4px 14px rgba(0,0,0,0.30);">
       <img src="./Slides/imgs/logo.png" alt="Logo Universidad" style="width:280px;height:78px;object-fit:contain;">
     </div>
-
-    <!-- Capítulo -->
     <div style="display:flex;align-items:center;gap:14px;">
       <span style="width:16px;height:16px;background:var(--bauhaus-red);"></span>
       <span
         style="font-size:var(--type-small);letter-spacing:3px;font-weight:700;color:var(--vigo-blue);text-transform:uppercase;">01
         · Introducción</span>
     </div>
-
-    <!-- Logo Máster -->
     <div
       style="position:relative;z-index:20;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,0.55);padding:10px 18px;border-radius:8px;box-shadow:0 4px 14px rgba(0,0,0,0.30);">
       <img src="./Slides/imgs/logo_master.png" alt="Logo Máster" style="width:280px;height:78px;object-fit:contain;">
     </div>
   </div>
 
-  <!-- Apartado -->
-  <div style="padding:32px var(--pad-x) 0;">
-    <h2 style="margin:14px 0 0;font-size:56px;font-weight:900;color:var(--ink);letter-spacing:-1px;">
-      Como hablar con la IA
-    </h2>
+  <div style="flex:1;display:flex;align-items:center;gap:96px;padding:0 var(--pad-x) var(--pad-bottom);">
+    <image-slot id="context-ia-img" shape="circle" fit="cover" src="./Slides/imgs/Prompt.png"
+      placeholder="IA" style="flex:none;width:340px;height:340px;"></image-slot>
+    <div style="max-width:1000px;">
+      <h2 style="margin:0;font-size:var(--type-title);font-weight:900;color:var(--ink);letter-spacing:-1px;">
+        Contexto y motivación
+      </h2>
+      <ul style="margin:28px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:18px;">
+        <li style="display:flex;align-items:center;gap:18px;font-size:var(--type-body);color:#3B3C42;font-weight:300;">
+          <span style="width:14px;height:14px;background:var(--bauhaus-red);flex:none;"></span>
+          La IA ha irrumpido con fuerza en la vida diaria, transformando cómo nos comunicamos, trabajamos y nos
+          relacionamos.
+        </li>
+        <li style="display:flex;align-items:center;gap:18px;font-size:var(--type-body);color:#3B3C42;font-weight:300;">
+          <span style="width:14px;height:14px;border-radius:50%;background:var(--bauhaus-yellow);flex:none;"></span>
+          La generación de exámenes tipo test de calidad es compleja y requiere mucho tiempo y esfuerzo docente.
+        </li>
+        <li style="display:flex;align-items:center;gap:18px;font-size:var(--type-body);color:#3B3C42;font-weight:300;">
+          <span style="width:14px;height:14px;background:var(--vigo-blue);flex:none;"></span>
+          ¿Puede la IA ayudar a generar exámenes de calidad de manera rápida y eficiente?
+        </li>
+        <li style="display:flex;align-items:center;gap:18px;font-size:var(--type-body);color:#000000;font-weight:300;">
+          <span style="width:14px;height:14px;background:var(--vigo-blue);flex:none;"></span>
+          Integrar las innovaciones de la inteligencia artificial
+          en la práctica docente para mejorar la eficiencia y la calidad de la
+          evaluación del alumnado.
+        </li>
+      </ul>
+    </div>
   </div>
 
-  <div style="flex:1;display:flex;gap:56px;padding:36px var(--pad-x) var(--pad-bottom);">
-    <div style="flex:1;display:flex;flex-direction:column;gap:20px;">
-      <image-slot id="res-img-1" shape="rect" placeholder="Resultado 1" style="width:100%;height:340px;"></image-slot>
-      <div style="width:56px;height:6px;background:var(--bauhaus-red);"></div>
-      <p style="margin:0;font-size:24px;font-weight:300;color:#3B3C42;line-height:1.45;">
-        Prompt
-      </p>
-    </div>
-    <div style="flex:1;display:flex;flex-direction:column;gap:20px;">
-      <image-slot id="res-img-2" shape="rect" placeholder="Resultado 2" style="width:100%;height:340px;"></image-slot>
-      <div style="width:56px;height:6px;background:var(--bauhaus-yellow);"></div>
-      <p style="margin:0;font-size:24px;font-weight:300;color:#3B3C42;line-height:1.45;">
-        Prompt Engineering
-      </p>
-    </div>
-    <div style="flex:1;display:flex;flex-direction:column;gap:20px;">
-      <image-slot id="res-img-3" shape="rect" placeholder="Resultado 3" style="width:100%;height:340px;"></image-slot>
-      <div style="width:56px;height:6px;background:var(--vigo-blue);"></div>
-      <p style="margin:0;font-size:24px;font-weight:300;color:#3B3C42;line-height:1.45;">
-        Meta-Prompting
-      </p>
-    </div>
-  </div>
-
-  <!-- Footer -->
   <sc-if value="{{showNumbers}}" hint-placeholder-val="{{true}}">
     <div
       style="position:absolute;right:64px;bottom:64px;width:60px;height:60px;background:var(--vigo-blue);display:flex;align-items:center;justify-content:center;">
-      <span style="font-size:24px;font-weight:900;color:var(--white);">06</span>
+      <span style="font-size:24px;font-weight:900;color:var(--white);">03</span>
     </div>
   </sc-if>
 </section>
