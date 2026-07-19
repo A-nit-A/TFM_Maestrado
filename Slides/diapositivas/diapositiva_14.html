@@ -2,6 +2,17 @@
 <section data-label="Calidad de las preguntas" data-screen-label="14"
   data-speaker-notes="Calidad media de las preguntas según experiencia, frecuencia y actitud ante la IA."
   style="position:relative;width:100%;height:100%;background:var(--grey);overflow:hidden;display:flex;flex-direction:column;">
+  <style>
+    #calidad-img-1::part(image),
+    #calidad-img-2::part(image),
+    #calidad-img-3::part(image) {
+      width: 100% !important;
+      height: 100% !important;
+      left: 50% !important;
+      top: 50% !important;
+      object-fit: fill !important;
+    }
+  </style>
   <div
     style="position:absolute;left:-100px;bottom:-100px;width:0;height:0;border-left:160px solid transparent;border-right:160px solid transparent;border-bottom:240px solid var(--vigo-blue);opacity:{{shapeOpacity}};">
   </div>
@@ -70,7 +81,7 @@
     <div style="flex:1;display:flex;flex-direction:column;gap:20px;">
       <!-- Wrapper Clickable para la actitud modal -->
       <div data-zoom-trigger="calidad-actitud-modal" title="Hacer clic para ampliar gráfica">
-        <image-slot id="calidad-img-3" shape="rect" fit="contain" src="./Slides/imgs/Graficas/CalidadSegúnActitud.png"
+        <image-slot id="calidad-img-3" shape="rect" fit="contain" src="./Slides/imgs/Graficas/CalidadSegunActitud.png"
           placeholder="Actitud hacia la IA" style="width:100%;height:340px;pointer-events:none;"></image-slot>
       </div>
       <div style="width:56px;height:6px;background:var(--vigo-blue);"></div>
@@ -107,7 +118,7 @@
   <!-- Modal 3: Calidad según actitud hacia la IA -->
   <div id="calidad-actitud-modal" data-zoom-modal="true"
     style="display:none;position:absolute;inset:0;background:rgba(21,22,26,0.92);z-index:9999;align-items:center;justify-content:center;backdrop-filter:blur(8px);transition:all 0.25s ease-in-out;">
-    <img src="./Slides/imgs/Graficas/CalidadSegúnActitud.png" alt="Calidad según actitud hacia la IA ampliada"
+    <img src="./Slides/imgs/Graficas/CalidadSegunActitud.png" alt="Calidad según actitud hacia la IA ampliada"
       style="max-width:92%;max-height:88%;border-radius:12px;box-shadow:0 24px 64px rgba(0,0,0,0.6);object-fit:contain;" />
     <div
       style="position:absolute;top:40px;right:40px;width:50px;height:50px;border-radius:50%;background:rgba(255,255,255,0.15);display:flex;align-items:center;justify-content:center;color:var(--white);font-size:28px;font-weight:900;transition:background 0.2s;"
