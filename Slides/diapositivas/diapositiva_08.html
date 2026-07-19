@@ -30,27 +30,32 @@
   </div>
 
   <!-- Apartado -->
-  <div style="padding:32px var(--pad-x) 0;">
-    <h2 style="margin:14px 0 0;font-size:56px;font-weight:900;color:var(--ink);letter-spacing:-1px;">
-      Diseño de la investigación
-    </h2>
-  </div>
+  <div style="flex:1;display:flex;gap:80px;padding:40px var(--pad-x) var(--pad-bottom);
+  align-items:stretch;">
 
-  <div style="flex:1;display:flex;gap:56px;padding:36px var(--pad-x) var(--pad-bottom);">
-    <div style="flex:1;display:flex;flex-direction:column;gap:20px;">
-      <image-slot id="res-img-1" shape="rect" placeholder="Resultado 1" style="width:100%;height:340px;"></image-slot>
-      <div style="width:56px;height:6px;background:var(--bauhaus-red);"></div>
-      <p style="margin:0;font-size:24px;font-weight:300;color:#3B3C42;line-height:1.45;">
+    <div style="z-index: 1;flex:1;display:flex;flex-direction:column;">
+
+      <!-- Diseño de la investigación -->
+      <h2 style="margin:14px 0 0;font-size:56px;font-weight:900;color:var(--ink);letter-spacing:-1px;">
+        Diseño de la investigación</h2>
+
+      <!-- Generación Automática de Ítems -->
+      <p style="font-size:var(--type-subtitle);font-weight:900;color:#3B3C42;">
         Generación Automática de Ítems
       </p>
-    </div>
-    <div style="flex:1;display:flex;flex-direction:column;gap:20px;">
-      <image-slot id="res-img-3" shape="rect" placeholder="Resultado 3" style="width:100%;height:340px;"></image-slot>
-      <div style="width:56px;height:6px;background:var(--vigo-blue);"></div>
-      <p style="margin:0;font-size:24px;font-weight:300;color:#3B3C42;line-height:1.45;">
+      <p style="font-size:var(--type-body);font-weight:300;color:#3B3C42;">
+        Crear el flujo de trabajo que nos permita la Generación Automática de Ítems.
+      </p>
+      <!-- Validación mediante expertos -->
+      <p style="font-size:var(--type-subtitle);font-weight:900;color:#3B3C42;">
         Validación mediante expertos
       </p>
+      <p style="font-size:var(--type-body);font-weight:300;color:#3B3C42;">
+        Validación por medio de una encuesta de las preguntas generadas por profesorado del departamento
+        de Informática del IES de Téis.
+      </p>
     </div>
+
   </div>
 
   <!-- Footer -->
