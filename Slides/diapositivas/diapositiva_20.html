@@ -1,22 +1,92 @@
-<!-- Diapositiva 08: Cierre y agradecimientos -->
-<section data-label="Cierre" data-screen-label="08" data-speaker-notes="Diapositiva de cierre: agradecimiento y datos de contacto." style="position:relative;width:100%;height:100%;background:var(--vigo-blue);overflow:hidden;display:flex;flex-direction:column;">
-<div style="position:absolute;left:50%;top:-300px;width:640px;height:640px;border-radius:50%;background:var(--bauhaus-yellow);opacity:{{shapeOpacity}};transform:translateX(-50%);"></div>
-<div style="position:absolute;right:60px;bottom:180px;width:0;height:0;border-left:130px solid transparent;border-right:130px solid transparent;border-bottom:200px solid var(--bauhaus-red);opacity:{{shapeOpacity}};"></div>
-
-<div style="display:flex;align-items:center;justify-content:space-between;padding:56px var(--pad-x) 0;">
-  <div style="position:relative;z-index:20;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,0.55);padding:10px 18px;border-radius:8px;box-shadow:0 4px 14px rgba(0,0,0,0.30);"><img src="./Slides/imgs/logo.png" alt="Logo Universidad" style="width:280px;height:78px;object-fit:contain;"></div>
-  <div style="position:relative;z-index:20;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,0.55);padding:10px 18px;border-radius:8px;box-shadow:0 4px 14px rgba(0,0,0,0.30);"><img src="./Slides/imgs/logo_master.png" alt="Logo Máster" style="width:280px;height:78px;object-fit:contain;"></div>
-</div>
-
-<div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;">
-  <h2 style="margin:0;font-size:120px;font-weight:900;color:var(--white);letter-spacing:-2px;">Gracias</h2>
-  <p style="margin:24px 0 0;font-size:var(--type-subtitle);font-weight:300;color:rgba(255,255,255,0.85);">Nombre Apellido Apellido · nombre.apellido@uvigo.gal</p>
-  <div style="margin-top:36px;width:120px;height:6px;background:var(--bauhaus-red);"></div>
-</div>
-
-<sc-if value="{{showNumbers}}" hint-placeholder-val="{{true}}">
-  <div style="position:absolute;right:64px;bottom:64px;width:60px;height:60px;background:var(--bauhaus-yellow);display:flex;align-items:center;justify-content:center;">
-    <span style="font-size:24px;font-weight:900;color:var(--ink);">08</span>
+<!-- Diapositiva 20: Reflexión y mejoras -->
+<section data-label="Limitaciones" data-screen-label="20"
+  data-speaker-notes="Cifra o cita destacada, un dato clave de las conclusiones." style="position:relative;width:100%;height:100%;background:var(--paper);overflow:hidden;
+  display:flex;flex-direction:column;">
+  <div
+    style="position:absolute;right:-160px;bottom:-160px;width:480px;height:480px;border-radius:50%;background:var(--bauhaus-red);opacity:{{shapeOpacity}};">
   </div>
-</sc-if>
+  <div
+    style="position:absolute;left:80px;top:120px;width:90px;height:90px;background:var(--bauhaus-yellow);opacity:{{shapeOpacity}};">
+  </div>
+
+  <!-- Cabecera -->
+  <div style="display:flex;align-items:center;justify-content:space-between;padding:56px var(--pad-x) 0;">
+
+    <!-- Logo Universidad -->
+    <div
+      style="position:relative;z-index:20;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,0.55);padding:10px 18px;border-radius:8px;box-shadow:0 4px 14px rgba(0,0,0,0.30);">
+      <img src="./Slides/imgs/logo.png" alt="Logo Universidad" style="width:280px;height:78px;object-fit:contain;">
+    </div>
+
+    <!-- Capítulo -->
+    <div style="display:flex;align-items:center;gap:14px;">
+      <span style="width:16px;height:16px;background:var(--vigo-blue);"></span>
+      <span
+        style="font-size:var(--type-small);letter-spacing:3px;font-weight:700;color:var(--bauhaus-yellow);text-transform:uppercase;">
+        04 - Discusión y Conclusiones
+      </span>
+    </div>
+
+    <!-- Logo Máster -->
+    <div
+      style="position:relative;z-index:20;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,0.55);padding:10px 18px;border-radius:8px;box-shadow:0 4px 14px rgba(0,0,0,0.30);">
+      <img src="./Slides/imgs/logo_master.png" alt="Logo Máster" style="width:280px;height:78px;object-fit:contain;">
+    </div>
+
+  </div>
+
+  <!-- Apartado -->
+  <div style="flex:1;display:flex;gap:80px;padding:40px var(--pad-x) var(--pad-bottom);align-items:stretch;">
+    <div style="z-index: 1;flex:1;display:flex;flex-direction:column;">
+
+      <!-- Reflexión -->
+      <h2 style="margin:14px 0 0;font-size:56px;font-weight:900;color:var(--ink);letter-spacing:-1px;">
+        Reflexión
+      </h2>
+      <p style="font-size:var(--type-body);font-weight:300;color:#3B3C42;">
+        El flujo de trabajo propuesto demuestra ser efectivo para la generación automática de ítems
+        pero al mismo tiempo puede ser una ayuda inestimable al alumno si adopta el mismo
+        tipo de metodología para el autoaprendizaje.
+      </p>
+
+      <!-- Mejoras -->
+      <h2 style="margin:14px 0 0;font-size:56px;font-weight:900;color:var(--ink);letter-spacing:-1px;">
+        Mejoras
+      </h2>
+
+      <ul style="margin:40px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:var(--gap-item);">
+        <li style="display:flex;gap:22px;align-items:flex-start;"><span
+            style="flex:none;width:40px;height:40px;background:var(--bauhaus-red);color:var(--white);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:18px;">
+          </span>
+          <span style="font-size:var(--type-body);font-weight:300;color:#3B3C42;padding-top:4px;">
+            Estuidos de campo con alumnado real.
+          </span>
+        </li>
+        <li style="display:flex;gap:22px;align-items:flex-start;"><span
+            style="flex:none;width:40px;height:40px;border-radius:50%;background:var(--bauhaus-yellow);color:var(--ink);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:18px;">
+          </span>
+          <span style="font-size:var(--type-body);font-weight:300;color:#3B3C42;padding-top:4px;">
+            Crear un programa que analice los resultados de los exámenes e indique al profesorado
+            que conceptos son más difíciles de adquirir para el alumnado.
+          </span>
+        </li>
+        <li style="display:flex;gap:22px;align-items:flex-start;"><span
+            style="flex:none;width:40px;height:40px;background:var(--vigo-blue);color:var(--white);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:18px;">
+          </span>
+          <span style="font-size:var(--type-body);font-weight:300;color:#3B3C42;padding-top:4px;">
+            Ampliar la población del estudio y las materias.
+          </span>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <sc-if value="{{showNumbers}}" hint-placeholder-val="{{true}}">
+    <div
+      style="position:absolute;right:64px;bottom:64px;width:60px;height:60px;background:var(--bauhaus-yellow);display:flex;align-items:center;justify-content:center;">
+      <span style="font-size:24px;font-weight:900;color:var(--ink);">20</span>
+    </div>
+  </sc-if>
 </section>
