@@ -51,19 +51,24 @@
         a:hover {
           color: var(--bauhaus-red);
         }
+
         [data-zoom-trigger] {
           cursor: zoom-in;
           transition: transform 0.2s ease-in-out;
         }
+
         [data-zoom-trigger]:hover {
           transform: scale(1.02);
         }
+
         [data-zoom-modal] {
           cursor: zoom-out;
         }
+
         [data-zoom-modal] img {
           transition: transform 0.25s ease-in-out;
         }
+
         [data-zoom-modal] img:hover {
           transform: scale(1.01);
         }
@@ -106,6 +111,9 @@ class Component extends DCLogic {
         './Slides/diapositivas/diapositiva_12.html',
         './Slides/diapositivas/diapositiva_13.html',
         './Slides/diapositivas/diapositiva_14.html',
+        './Slides/diapositivas/diapositiva_15.html',
+        './Slides/diapositivas/diapositiva_16.html',
+        './Slides/diapositivas/diapositiva_17.html'
       ];
 
       try {
@@ -182,7 +190,7 @@ class Component extends DCLogic {
       document.addEventListener('keydown', bootstrapVideos);
 
       // Escuchar clics globales para abrir/cerrar modales de zoom de imágenes
-      document.addEventListener('click', function(e) {
+      document.addEventListener('click', function (e) {
         const trigger = e.target.closest('[data-zoom-trigger]');
         if (trigger) {
           const modalId = trigger.getAttribute('data-zoom-trigger');

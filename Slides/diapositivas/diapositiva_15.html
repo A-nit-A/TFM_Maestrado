@@ -1,0 +1,115 @@
+<!-- Diapositiva 15: Calidad por modelo de IA -->
+<section data-label="Calidad por modelo de IA" data-screen-label="15"
+  data-speaker-notes="Calidad media de las preguntas según experiencia, frecuencia y actitud ante la IA."
+  style="position:relative;width:100%;height:100%;background:var(--grey);overflow:hidden;display:flex;flex-direction:column;">
+  <style>
+    #modelo-img-1::part(image),
+    #modelo-img-2::part(image),
+    #modelo-img-3::part(image) {
+      width: 100% !important;
+      height: 100% !important;
+      left: 50% !important;
+      top: 50% !important;
+      object-fit: fill !important;
+    }
+  </style>
+  <div
+    style="position:absolute;left:-100px;bottom:-100px;width:0;height:0;border-left:160px solid transparent;border-right:160px solid transparent;border-bottom:240px solid var(--vigo-blue);opacity:{{shapeOpacity}};">
+  </div>
+
+  <!-- Cabecera -->
+  <div style="display:flex;align-items:center;justify-content:space-between;padding:56px var(--pad-x) 0;">
+    <!-- Logo Universidad -->
+    <div
+      style="position:relative;z-index:20;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,0.55);padding:10px 18px;border-radius:8px;box-shadow:0 4px 14px rgba(0,0,0,0.30);">
+      <img src="./Slides/imgs/logo.png" alt="Logo Universidad" style="width:280px;height:78px;object-fit:contain;">
+    </div>
+
+    <!-- Capítulo -->
+    <div style="display:flex;align-items:center;gap:14px;">
+      <span style="width:16px;height:16px;background:var(--white);"></span>
+      <span
+        style="font-size:var(--type-small);letter-spacing:3px;font-weight:700;color:var(--vigo-blue);text-transform:uppercase;">
+        03 - RESULTADOS
+      </span>
+    </div>
+
+    <!-- Logo Máster -->
+    <div
+      style="position:relative;z-index:20;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,0.55);padding:10px 18px;border-radius:8px;box-shadow:0 4px 14px rgba(0,0,0,0.30);">
+      <img src="./Slides/imgs/logo_master.png" alt="Logo Máster" style="width:280px;height:78px;object-fit:contain;">
+    </div>
+  </div>
+
+  <!-- Apartado -->
+  <div style="padding:32px var(--pad-x) 0;">
+    <h2 style="margin:14px 0 0;font-size:56px;font-weight:900;color:var(--ink);letter-spacing:-1px;">
+      Calidad por modelo de IA
+    </h2>
+    <p style="font-size:var(--type-body);font-weight:300;color:#3B3C42;">
+      <li style="display:flex;gap:22px;align-items:flex-start;"><span
+          style="flex:none;width:40px;height:40px;background:var(--bauhaus-red);color:var(--white);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:18px;">
+        </span>
+        <span style="font-size:var(--type-body);font-weight:300;color:#3B3C42;padding-top:4px;">
+          Rendimiento parejo.
+        </span>
+      </li>
+      <li style="display:flex;gap:22px;align-items:flex-start;"><span
+          style="flex:none;width:40px;height:40px;border-radius:50%;background:var(--bauhaus-yellow);color:var(--ink);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:18px;">
+        </span>
+        <span style="font-size:var(--type-body);font-weight:300;color:#3B3C42;padding-top:4px;">
+          Cuentas gratuitas.
+        </span>
+      </li>
+      <li style="display:flex;gap:22px;align-items:flex-start;"><span
+          style="flex:none;width:40px;height:40px;background:var(--vigo-blue);color:var(--white);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:18px;">
+        </span>
+        <span style="font-size:var(--type-body);font-weight:300;color:#3B3C42;padding-top:4px;">
+          Open-Source.
+        </span>
+      </li>
+      <li style="display:flex;gap:22px;align-items:flex-start;"><span
+          style="flex:none;width:40px;height:40px;background:var(--ink);color:var(--white);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:18px;">
+        </span>
+        <span style="font-size:var(--type-body);font-weight:300;color:#3B3C42;padding-top:4px;">
+          No se necesita razonamiento profundo.
+        </span>
+      </li>
+    </p>
+  </div>
+
+  <div style="flex:1;display:flex;gap:56px;padding:36px var(--pad-x) var(--pad-bottom);">
+    <div style="flex:1;display:flex;flex-direction:column;gap:20px;">
+      <!-- Wrapper Clickable para el perfil docente modal -->
+      <div data-zoom-trigger="calidad-exp-modal" title="Hacer clic para ampliar gráfica">
+        <image-slot id="calidad-img-1" shape="rect" fit="contain"
+          src="./Slides/imgs/Graficas/CalidadPorModeloBarras.png" placeholder="Perfil del docente"
+          style="width:100%;height:340px;pointer-events:none;"></image-slot>
+      </div>
+      <div style="width:56px;height:6px;background:var(--bauhaus-red);"></div>
+      <p style="margin:0;font-size:24px;font-weight:300;color:#3B3C42;line-height:1.45;">
+        Por modelo de IA
+      </p>
+    </div>
+  </div>
+
+  <!-- Modal 1: Calidad por modelo de IA -->
+  <div id="calidad-exp-modal" data-zoom-modal="true"
+    style="display:none;position:absolute;inset:0;background:rgba(21,22,26,0.92);z-index:9999;align-items:center;justify-content:center;backdrop-filter:blur(8px);transition:all 0.25s ease-in-out;">
+    <img src="./Slides/imgs/Graficas/CalidadPorModeloBarras.png" alt="Calidad según experiencia ampliada"
+      style="max-width:92%;max-height:88%;border-radius:12px;box-shadow:0 24px 64px rgba(0,0,0,0.6);object-fit:contain;" />
+    <div
+      style="position:absolute;top:40px;right:40px;width:50px;height:50px;border-radius:50%;background:rgba(255,255,255,0.15);display:flex;align-items:center;justify-content:center;color:var(--white);font-size:28px;font-weight:900;transition:background 0.2s;"
+      class="close-btn">
+      &times;
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <sc-if value="{{showNumbers}}" hint-placeholder-val="{{true}}">
+    <div
+      style="position:absolute;right:64px;bottom:64px;width:60px;height:60px;background:var(--vigo-blue);display:flex;align-items:center;justify-content:center;">
+      <span style="font-size:24px;font-weight:900;color:var(--white);">15</span>
+    </div>
+  </sc-if>
+</section>

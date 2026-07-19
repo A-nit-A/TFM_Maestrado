@@ -1,0 +1,113 @@
+<!-- Diapositiva 16: Reflexiones -->
+<section data-label="Calidad de las preguntas" data-screen-label="16"
+  data-speaker-notes="Calidad media de las preguntas según experiencia, frecuencia y actitud ante la IA."
+  style="position:relative;width:100%;height:100%;background:var(--grey);overflow:hidden;display:flex;flex-direction:column;">
+  <style>
+    #calidad-img-1::part(image),
+    #calidad-img-2::part(image),
+    #calidad-img-3::part(image) {
+      width: 100% !important;
+      height: 100% !important;
+      left: 50% !important;
+      top: 50% !important;
+      object-fit: fill !important;
+    }
+  </style>
+  <div
+    style="position:absolute;left:-100px;bottom:-100px;width:0;height:0;border-left:160px solid transparent;border-right:160px solid transparent;border-bottom:240px solid var(--vigo-blue);opacity:{{shapeOpacity}};">
+  </div>
+
+  <!-- Cabecera -->
+  <div style="display:flex;align-items:center;justify-content:space-between;padding:56px var(--pad-x) 0;">
+    <!-- Logo Universidad -->
+    <div
+      style="position:relative;z-index:20;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,0.55);padding:10px 18px;border-radius:8px;box-shadow:0 4px 14px rgba(0,0,0,0.30);">
+      <img src="./Slides/imgs/logo.png" alt="Logo Universidad" style="width:280px;height:78px;object-fit:contain;">
+    </div>
+
+    <!-- Capítulo -->
+    <div style="display:flex;align-items:center;gap:14px;">
+      <span style="width:16px;height:16px;background:var(--white);"></span>
+      <span
+        style="font-size:var(--type-small);letter-spacing:3px;font-weight:700;color:var(--vigo-blue);text-transform:uppercase;">
+        03 - RESULTADOS
+      </span>
+    </div>
+
+    <!-- Logo Máster -->
+    <div
+      style="position:relative;z-index:20;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,0.55);padding:10px 18px;border-radius:8px;box-shadow:0 4px 14px rgba(0,0,0,0.30);">
+      <img src="./Slides/imgs/logo_master.png" alt="Logo Máster" style="width:280px;height:78px;object-fit:contain;">
+    </div>
+  </div>
+
+  <!-- Apartado -->
+  <div style="padding:32px var(--pad-x) 0;">
+    <h2 style="margin:14px 0 0;font-size:56px;font-weight:900;color:var(--ink);letter-spacing:-1px;">
+      Reflexiones
+    </h2>
+    <p style="font-size:var(--type-body);font-weight:300;color:#3B3C42;">
+      Finalmente los encuestados creen que la supervisión docente es necesaria.
+      Tambén se constata un gran ahorro de tiempo en la creacion de exámenes.
+
+    <div style="flex:1;display:flex;gap:56px;padding:36px var(--pad-x) var(--pad-bottom);">
+      <div style="flex:1;display:flex;flex-direction:column;gap:20px;">
+        <!-- Wrapper Clickable para el perfil docente modal -->
+        <div data-zoom-trigger="ManInTheMiddleModal" title="Hacer clic para ampliar gráfica">
+          <image-slot id="Reflexiones-img-1" shape="rect" fit="cover" src="./Slides/imgs/Graficas/Reflexiones.png"
+            placeholder="Man in the middle" style="width:100%;height:340px;pointer-events:none;"></image-slot>
+        </div>
+        <div style="width:56px;height:6px;background:var(--bauhaus-red);"></div>
+        <p style="margin:0;font-size:24px;font-weight:300;color:#3B3C42;line-height:1.45;">
+          Man in the middle
+        </p>
+      </div>
+
+      <div style="flex:1;display:flex;flex-direction:column;gap:20px;">
+        <!-- Wrapper Clickable para la frecuencia modal -->
+        <div data-zoom-trigger="AhorroDeTiempo" title="Hacer clic para ampliar gráfica">
+          <image-slot id="Reflexiones-img-2" shape="rect" fit="cover"
+            src="./Slides/imgs/Graficas/TiempoCreacionExamen.png" placeholder="Ahorro de tiempo"
+            style="width:100%;height:340px;pointer-events:none;"></image-slot>
+        </div>
+        <div style="width:56px;height:6px;background:var(--bauhaus-yellow);"></div>
+        <p style="margin:0;font-size:24px;font-weight:300;color:#3B3C42;line-height:1.45;">
+          Ahorro de tiempo
+        </p>
+      </div>
+    </div>
+
+    <!-- Modal 1: Man in the middle -->
+    <div id="ManInTheMiddleModal" data-zoom-modal="true"
+      style="display:none;position:absolute;inset:0;background:rgba(21,22,26,0.92);z-index:9999;align-items:center;justify-content:center;backdrop-filter:blur(8px);transition:all 0.25s ease-in-out;">
+      <img src="./Slides/imgs/Graficas/Reflexiones.png" alt="Man in the middle"
+        style="max-width:92%;max-height:88%;border-radius:12px;box-shadow:0 24px 64px rgba(0,0,0,0.6);object-fit:contain;" />
+      <div
+        style="position:absolute;top:40px;right:40px;width:50px;height:50px;border-radius:50%;background:rgba(255,255,255,0.15);display:flex;align-items:center;justify-content:center;color:var(--white);font-size:28px;font-weight:900;transition:background 0.2s;"
+        class="close-btn">
+        &times;
+      </div>
+    </div>
+
+    <!-- Modal 2: Ahoro de tiempo -->
+    <div id="AhorroDeTiempo" data-zoom-modal="true"
+      style="display:none;position:absolute;inset:0;background:rgba(21,22,26,0.92);z-index:9999;align-items:center;justify-content:center;backdrop-filter:blur(8px);transition:all 0.25s ease-in-out;">
+      <img src="./Slides/imgs/Graficas/TiempoCreacionExamen.png" alt="Ahoro de tiempo"
+        style="max-width:92%;max-height:88%;border-radius:12px;box-shadow:0 24px 64px rgba(0,0,0,0.6);object-fit:contain;" />
+      <div
+        style="position:absolute;top:40px;right:40px;width:50px;height:50px;border-radius:50%;background:rgba(255,255,255,0.15);display:flex;align-items:center;justify-content:center;color:var(--white);font-size:28px;font-weight:900;transition:background 0.2s;"
+        class="close-btn">
+        &times;
+      </div>
+    </div>
+
+
+
+    <!-- Footer -->
+    <sc-if value="{{showNumbers}}" hint-placeholder-val="{{true}}">
+      <div
+        style="position:absolute;right:64px;bottom:64px;width:60px;height:60px;background:var(--vigo-blue);display:flex;align-items:center;justify-content:center;">
+        <span style="font-size:24px;font-weight:900;color:var(--white);">14</span>
+      </div>
+    </sc-if>
+</section>
