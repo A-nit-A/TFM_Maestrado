@@ -39,32 +39,96 @@
 
   <div style="flex:1;display:flex;gap:40px;padding:36px var(--pad-x) var(--pad-bottom);">
     <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:20px;">
-      <image-slot id="flow-img-1" shape="rect" fit="contain" src="./Slides/imgs/BibliotecaConocimiento_ICON.png" placeholder="Paso 1" style="width:100%;height:340px;"></image-slot>
+      <!-- Wrapper Clickable para el paso 1 modal -->
+      <div data-zoom-trigger="flow-biblioteca-modal" title="Hacer clic para ampliar imagen">
+        <image-slot id="flow-img-1" shape="rect" fit="cover" src="./Slides/imgs/BibliotecaConocimiento_ICON.png"
+          placeholder="Paso 1" style="width:100%;height:340px;pointer-events:none;"></image-slot>
+      </div>
       <div style="width:56px;height:6px;background:var(--bauhaus-red);"></div>
       <p style="margin:0;font-size:24px;font-weight:300;color:#3B3C42;line-height:1.45;">
         Biblioteca de conocimiento
       </p>
     </div>
     <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:20px;">
-      <image-slot id="flow-img-2" shape="rect" fit="contain" src="./Slides/imgs/Prompt_ICON.png" placeholder="Paso 2" style="width:100%;height:340px;"></image-slot>
+      <!-- Wrapper Clickable para el paso 2 modal -->
+      <div data-zoom-trigger="flow-prompt-modal" title="Hacer clic para ampliar imagen">
+        <image-slot id="flow-img-2" shape="rect" fit="cover" src="./Slides/imgs/Prompt_ICON.png" placeholder="Paso 2"
+          style="width:100%;height:340px;pointer-events:none;"></image-slot>
+      </div>
       <div style="width:56px;height:6px;background:var(--vigo-blue);"></div>
       <p style="margin:0;font-size:24px;font-weight:300;color:#3B3C42;line-height:1.45;">
         Crear un prompt
       </p>
     </div>
     <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:20px;">
-      <image-slot id="flow-img-3" shape="rect" fit="contain" src="./Slides/imgs/AIG_ICON.png" placeholder="Paso 3" style="width:100%;height:340px;"></image-slot>
+      <!-- Wrapper Clickable para el paso 3 modal -->
+      <div data-zoom-trigger="flow-aig-modal" title="Hacer clic para ampliar imagen">
+        <image-slot id="flow-img-3" shape="rect" fit="cover" src="./Slides/imgs/AIG_ICON.png" placeholder="Paso 3"
+          style="width:100%;height:340px;pointer-events:none;"></image-slot>
+      </div>
       <div style="width:56px;height:6px;background:var(--bauhaus-yellow);"></div>
       <p style="margin:0;font-size:24px;font-weight:300;color:#3B3C42;line-height:1.45;">
         Generar examen
       </p>
     </div>
     <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:20px;">
-      <image-slot id="flow-img-4" shape="rect" fit="contain" src="./Slides/imgs/Dice_ICON.png" placeholder="Paso 4" style="width:100%;height:340px;"></image-slot>
+      <!-- Wrapper Clickable para el paso 4 modal -->
+      <div data-zoom-trigger="flow-dice-modal" title="Hacer clic para ampliar imagen">
+        <image-slot id="flow-img-4" shape="rect" fit="cover" src="./Slides/imgs/Dice_ICON.png" placeholder="Paso 4"
+          style="width:100%;height:340px;pointer-events:none;"></image-slot>
+      </div>
       <div style="width:56px;height:6px;background:var(--ink);"></div>
       <p style="margin:0;font-size:24px;font-weight:300;color:#3B3C42;line-height:1.45;">
         Revisar y validar
       </p>
+    </div>
+  </div>
+
+  <!-- Modal 1: Biblioteca de conocimiento -->
+  <div id="flow-biblioteca-modal" data-zoom-modal="true"
+    style="display:none;position:absolute;inset:0;background:rgba(21,22,26,0.92);z-index:9999;align-items:center;justify-content:center;backdrop-filter:blur(8px);transition:all 0.25s ease-in-out;">
+    <img src="./Slides/imgs/BibliotecaConocimiento.png" alt="Biblioteca de conocimiento ampliada"
+      style="max-width:92%;max-height:88%;border-radius:12px;box-shadow:0 24px 64px rgba(0,0,0,0.6);object-fit:contain;" />
+    <div
+      style="position:absolute;top:40px;right:40px;width:50px;height:50px;border-radius:50%;background:rgba(255,255,255,0.15);display:flex;align-items:center;justify-content:center;color:var(--white);font-size:28px;font-weight:900;transition:background 0.2s;"
+      class="close-btn">
+      &times;
+    </div>
+  </div>
+
+  <!-- Modal 2: Crear un prompt -->
+  <div id="flow-prompt-modal" data-zoom-modal="true"
+    style="display:none;position:absolute;inset:0;background:rgba(21,22,26,0.92);z-index:9999;align-items:center;justify-content:center;backdrop-filter:blur(8px);transition:all 0.25s ease-in-out;">
+    <img src="./Slides/imgs/Prompt.png" alt="Crear un prompt ampliado"
+      style="max-width:92%;max-height:88%;border-radius:12px;box-shadow:0 24px 64px rgba(0,0,0,0.6);object-fit:contain;" />
+    <div
+      style="position:absolute;top:40px;right:40px;width:50px;height:50px;border-radius:50%;background:rgba(255,255,255,0.15);display:flex;align-items:center;justify-content:center;color:var(--white);font-size:28px;font-weight:900;transition:background 0.2s;"
+      class="close-btn">
+      &times;
+    </div>
+  </div>
+
+  <!-- Modal 3: Generar examen -->
+  <div id="flow-aig-modal" data-zoom-modal="true"
+    style="display:none;position:absolute;inset:0;background:rgba(21,22,26,0.92);z-index:9999;align-items:center;justify-content:center;backdrop-filter:blur(8px);transition:all 0.25s ease-in-out;">
+    <img src="./Slides/imgs/AIG.png" alt="Generar examen ampliado"
+      style="max-width:92%;max-height:88%;border-radius:12px;box-shadow:0 24px 64px rgba(0,0,0,0.6);object-fit:contain;" />
+    <div
+      style="position:absolute;top:40px;right:40px;width:50px;height:50px;border-radius:50%;background:rgba(255,255,255,0.15);display:flex;align-items:center;justify-content:center;color:var(--white);font-size:28px;font-weight:900;transition:background 0.2s;"
+      class="close-btn">
+      &times;
+    </div>
+  </div>
+
+  <!-- Modal 4: Revisar y validar -->
+  <div id="flow-dice-modal" data-zoom-modal="true"
+    style="display:none;position:absolute;inset:0;background:rgba(21,22,26,0.92);z-index:9999;align-items:center;justify-content:center;backdrop-filter:blur(8px);transition:all 0.25s ease-in-out;">
+    <img src="./Slides/imgs/Dice.png" alt="Revisar y validar ampliado"
+      style="max-width:92%;max-height:88%;border-radius:12px;box-shadow:0 24px 64px rgba(0,0,0,0.6);object-fit:contain;" />
+    <div
+      style="position:absolute;top:40px;right:40px;width:50px;height:50px;border-radius:50%;background:rgba(255,255,255,0.15);display:flex;align-items:center;justify-content:center;color:var(--white);font-size:28px;font-weight:900;transition:background 0.2s;"
+      class="close-btn">
+      &times;
     </div>
   </div>
 
